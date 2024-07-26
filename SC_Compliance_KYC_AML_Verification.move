@@ -1,4 +1,6 @@
 module SealCompliance {
+    use std::address;
+
     resource struct KYCData {
         user: address,
         verified: bool,
@@ -6,11 +8,13 @@ module SealCompliance {
     }
 
     public fun verify_user(user: &signer, kyc_data: KYCData) {
-        // logic to verify KYC information
+        // Logic to securely verify KYC information, potentially using oracles
+        // ...
     }
 
     public fun is_verified(user: &address): bool {
-        // logic to check if a user is verified
+        // Logic to check if a user is verified with detailed audit logging
+        // ...
     }
 
     // Additional compliance-related functions
