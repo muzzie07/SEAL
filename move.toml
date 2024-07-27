@@ -1,0 +1,26 @@
+[package]
+name = "SEAL"
+version = "0.1.0"
+authors = ["Assil Belaiba"]
+license = "MIT"
+
+[dependencies]
+AptosFramework = { git = 'https://github.com/aptos-labs/aptos-core.git', subdir = 'aptos-move/framework/aptos-framework', rev = '83250343e09f10e56f6ddbd8019f6d4634488349' }
+AptosToken = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-token/", rev = "8244cda0130337e8c864f6f6fbc33b0a510e97cf" }
+AptosStdlib = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-stdlib/", rev = "c613c43577b42fa657321f6faab2855c3ace3052" }
+Pyth = { git = "https://github.com/pyth-network/pyth-crosschain.git", subdir = "target_chains/aptos/contracts", rev = "7dea57841684aaf9bd7c0ba6ae6faa0e8870891b" }
+Switchboard = { git = "https://github.com/switchboard-xyz/sbv2-aptos.git", subdir = "move/switchboard/", rev = "af84bf42309e487fe97ac9cc0f6711038cf53355" }
+MoveStdlib = { git = "https://github.com/aptos-labs/aptos-core.git", rev = "main", subdir = "move-stdlib" }
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", rev = "main", subdir = "aptos-framework" }
+
+[addresses]
+SealTrading = { git = "https://github.com/muzzie07/SEAL.git", subdir = "path/to/SealTrading", rev = "main" }
+SealEscrow = { git = "https://github.com/muzzie07/SEAL.git", subdir = "path/to/SealEscrow", rev = "main" }
+SealSecurity = { git = "https://github.com/muzzie07/SEAL.git", subdir = "path/to/SealSecurity", rev = "main" }
+SealCompliance = { git = "https://github.com/muzzie07/SEAL.git", subdir = "path/to/SealCompliance", rev = "main" }
+SealAPI = { git = "https://github.com/muzzie07/SEAL.git", subdir = "path/to/SealAPI", rev = "main" }
+
+
+[build]
+# Build settings and configurations
+dev_mode = true
